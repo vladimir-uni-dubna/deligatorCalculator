@@ -3,6 +3,52 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Калькулятор с делегатами" Height="500" Width="350"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+        <!-- Стиль для кнопок с цифрами -->
+        <Style x:Key="NumberButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Background" Value="#F0F0F0"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!-- Стиль для кнопок операций -->
+        <Style x:Key="OperationButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Background" Value="#FFB84D"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FF9933"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!-- Стиль для кнопки очистки -->
+        <Style x:Key="ClearButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Background" Value="#FF4D4D"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#CC0000"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!-- Стиль для кнопки равно -->
+        <Style x:Key="EqualsButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Background" Value="#4CAF50"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#45A049"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -63,49 +109,4 @@
             <Button Content="=" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Click="EqualsButton_Click" Style="{StaticResource EqualsButtonStyle}"/>
         </Grid>
     </Grid>
-
-    <Window.Resources>
-        <!-- Стиль для кнопок с цифрами -->
-        <Style x:Key="NumberButtonStyle" TargetType="Button">
-            <Setter Property="FontSize" Value="24"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="3"/>
-            <Setter Property="Background" Value="#F0F0F0"/>
-            <Setter Property="BorderBrush" Value="#CCCCCC"/>
-            <Setter Property="BorderThickness" Value="1"/>
-        </Style>
-
-        <!-- Стиль для кнопок операций -->
-        <Style x:Key="OperationButtonStyle" TargetType="Button">
-            <Setter Property="FontSize" Value="24"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="3"/>
-            <Setter Property="Background" Value="#FFB84D"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderBrush" Value="#FF9933"/>
-            <Setter Property="BorderThickness" Value="1"/>
-        </Style>
-
-        <!-- Стиль для кнопки очистки -->
-        <Style x:Key="ClearButtonStyle" TargetType="Button">
-            <Setter Property="FontSize" Value="24"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="3"/>
-            <Setter Property="Background" Value="#FF4D4D"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderBrush" Value="#CC0000"/>
-            <Setter Property="BorderThickness" Value="1"/>
-        </Style>
-
-        <!-- Стиль для кнопки равно -->
-        <Style x:Key="EqualsButtonStyle" TargetType="Button">
-            <Setter Property="FontSize" Value="28"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="3"/>
-            <Setter Property="Background" Value="#4CAF50"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderBrush" Value="#45A049"/>
-            <Setter Property="BorderThickness" Value="1"/>
-        </Style>
-    </Window.Resources>
 </Window>
